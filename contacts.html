@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Добрострой — Контакты</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__row">
+    <div class="brand">
+      <img src="img/logo.jpg" alt="Логотип Добрострой">
+      <div class="brand__text">
+        <b>Добрострой</b>
+        <span>Строительно-отделочные материалы</span>
+      </div>
+    </div>
+    <div class="title">ДОБРОСТРОЙ</div>
+    <div class="authbox">
+      <form action="auth.html" method="get">
+        <input type="text" name="login" placeholder="Логин">
+        <input type="password" name="pass" placeholder="Пароль">
+        <div class="row">
+          <button class="btn" type="submit">Войти</button>
+          <a href="auth.html">Регистрация</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</header>
+
+<div class="topbar">
+  <div class="container topbar__row">
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="auth.html">Личный кабинет</a>
+    </nav>
+
+    <form class="search" action="catalog.html" method="get">
+      <input type="search" name="q" placeholder="Поиск по каталогу (например: краска)">
+      <button class="btn" type="submit">Найти</button>
+    </form>
+  </div>
+</div>
+
+<section class="main">
+  <div class="container grid">
+    <aside class="side">
+      <a href="index.html#about">О компании</a>
+      <a href="catalog.html">Категории товаров</a>
+      <a href="contacts.html#delivery">Доставка и оплата</a>
+      <a href="auth.html">Личный кабинет</a>
+    </aside>
+
+    <main class="content">
+      <h1>КОНТАКТЫ</h1>
+
+      <h2>Связаться с нами</h2>
+      <form class="form" onsubmit="return sendMsg(event)">
+        <div class="two">
+          <div>
+            <label>Имя</label>
+            <input required type="text" placeholder="Введите имя">
+          </div>
+          <div>
+            <label>Email</label>
+            <input required type="email" placeholder="name@example.com">
+          </div>
+        </div>
+
+        <label>Тема</label>
+        <select>
+          <option>Вопрос по товару</option>
+          <option>Доставка</option>
+          <option>Оплата</option>
+          <option>Другое</option>
+        </select>
+
+        <label>Сообщение</label>
+        <textarea required placeholder="Текст сообщения..."></textarea>
+
+        <label>Произвольное поле</label>
+        <input type="text" placeholder="Например: удобное время звонка">
+
+        <div style="margin-top:10px">
+          <button class="btn" type="submit">Отправить</button>
+        </div>
+        <p id="ok" style="display:none; margin-top:10px;"><b>Сообщение отправлено (демо).</b></p>
+      </form>
+
+      <hr class="hr">
+
+      <h2>Адрес и телефон</h2>
+      <p><b>Телефон:</b> +7 (900) 000-00-00</p>
+      <p><b>Адрес:</b> г. Ваш город, ул. Примерная, 10</p>
+      <p><b>Email:</b> info@dobrostroy.ru</p>
+
+      <h2 id="delivery">Доставка и оплата</h2>
+      <p><b>Доставка:</b> по городу в течение 1–2 дней (пример). Возможен самовывоз со склада.</p>
+      <p><b>Оплата:</b> наличными, картой, переводом (пример). Для организаций — по счёту.</p>
+      <h2>Карта</h2>
+
+<div class="map">
+  <iframe
+    src="https://yandex.ru/map-widget/v1/?ll=37.617635%2C55.755814&z=16&pt=37.617635,55.755814,pm2rdm"
+    width="100%"
+    height="360"
+    frameborder="0"
+    allowfullscreen="true"
+    style="border:0;"
+    title="Добрострой на карте"
+  ></iframe>
+</div>
+
+<p class="note">Если карта не загрузилась — откройте страницу в браузере без блокировщиков.</p>
+
+
+    </main>
+
+    <aside class="right">
+      <div class="banner">
+        <img src="img/Perc.avif" alt="Акция недели">
+        <a href="catalog.html">Акция недели</a>
+      </div>
+      <div class="banner">
+        <img src="img/Shpack.webp" alt="Хит продаж: шпаклёвка">
+        <a href="product1.html">Хит продаж: шпаклёвка</a>
+      </div>
+      <div class="banner">
+        <img src="img/clay.webp" alt="Хит продаж: плиточный клей">
+        <a href="product2.html">Хит продаж: плиточный клей</a>
+      </div>
+    </aside>
+  </div>
+  
+
+</section>
+
+<footer class="footer">
+  <div class="container">© Все права защищены</div>
+</footer>
+
+<script>
+  function sendMsg(e){
+    e.preventDefault();
+    document.getElementById('ok').style.display = 'block';
+    return false;
+  }
+</script>
+
+</body>
+</html>
